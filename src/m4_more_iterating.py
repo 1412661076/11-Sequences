@@ -9,8 +9,8 @@ It also demonstrates using an ORACLE and/or PROBABILITY THEORY
 in testing and BOUNDARY (EDGE) TESTING.
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Rui Fang.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import random
 import builtins  # Never necessary, but here to make a point about SUM
@@ -191,6 +191,10 @@ def run_test_sum_sequence():
 
 
 def sum_sequence(sequence):
+    sum = 0
+    for k in range(len(sequence)):
+        sum = sum + sequence[k]
+    return sum
     """
     What comes in:  A sequence of integers.
     What goes out: Returns the sum of the numbers in the given sequence.
@@ -203,7 +207,7 @@ def sum_sequence(sequence):
       :type sequence: list or tuple (of integers)
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #          Tests have been written for you (above).
     #
     # RESTRICTION:
@@ -345,6 +349,12 @@ def run_test_count_items_bigger_than():
 
 
 def count_items_bigger_than(numbers, threshold):
+    count = 0
+    for k in range(len(numbers)):
+        if numbers[k] > threshold:
+            count = count +1
+    return count
+
     """
     What comes in:
       -- An sequence of numbers.
@@ -378,7 +388,7 @@ def count_items_bigger_than(numbers, threshold):
       :type threshold: float
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # ------------------------------------------------------------------
 
@@ -485,6 +495,12 @@ def run_test_count_positive_sines():
 
 
 def count_positive_sines(numbers):
+    count = 0
+    for k in range(len(numbers)):
+        if math.sin(numbers[k]) > 0:
+            count = count +1
+    return count
+
     """
     What comes in:  An sequence of numbers.
     What goes out: Returns the number of items in the given sequence
@@ -508,7 +524,7 @@ def count_positive_sines(numbers):
       :type sequence: list or tuple (of numbers)
     """
     # ------------------------------------------------------------------
-    # TODO: 7. Implement and test this function.
+    # DONE: 7. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # ------------------------------------------------------------------
 
@@ -589,10 +605,14 @@ def run_test_sum_first_n():
 
 
 def sum_first_n(numbers, n):
+    sum = 0
+    for k in range(0, n):
+        sum = sum + numbers[k]
+    return sum
     """
     What comes in:
       -- An sequence of numbers.
-      -- A nonnegative integer   n   that is less than or equal to
+      -- A non-negative integer   n   that is less than or equal to
            the length of the given sequence.
     What goes out:
       Returns the sum of the first   n   numbers in the given sequence,
@@ -610,7 +630,7 @@ def sum_first_n(numbers, n):
       :type n: int
     """
     # ------------------------------------------------------------------
-    # TODO: 9. Implement and test this function.
+    # DONE: 9. Implement and test this function.
     #          Tests have been written for you (above).
     #
     # RESTRICTION:

@@ -13,8 +13,8 @@ is different from:
   -- LOOKING only at items AT even-numbered indices.
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Rui Fang.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -342,6 +342,8 @@ def run_test_print_items_that_are_odd_integers(sequence1, sequence2, sequence3, 
 # Iterating through the ENTIRE sequence, FORWARDs.
 # ----------------------------------------------------------------------
 def print_all_items_forwards(sequence):
+    for k in range(len(sequence)):
+        print(sequence[k])
     """
     Prints the items in the given sequence in the order that
     they appear, that is, forwards.  Prints them one item per line.
@@ -354,7 +356,7 @@ def print_all_items_forwards(sequence):
        Point at (90, 25)
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #          Tests have been written for you (above).
     # ------------------------------------------------------------------
 
@@ -363,6 +365,9 @@ def print_all_items_forwards(sequence):
 # Iterating through the ENTIRE sequence, BACKWARDs.
 # ----------------------------------------------------------------------
 def print_all_items_backwards(sequence):
+    for k in range(len(sequence), 0, -1):
+        print(sequence[k])
+
     """
     Prints the items in the given sequence in the REVERSE of the order
     in which they appear, that is, prints them in backwards order.
@@ -376,7 +381,7 @@ def print_all_items_backwards(sequence):
        55
     """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #          Tests have been written for you (above).
     # ------------------------------------------------------------------
 
@@ -386,6 +391,9 @@ def print_all_items_backwards(sequence):
 #   -- in this sample problem, every other item in the sequence.
 # ----------------------------------------------------------------------
 def print_items_at_odd_indices(sequence):
+    for k in range(1, len(sequence), 2):
+        print(sequence[k], "is at index", k)
+
     """
     Prints the items at the odd-numbered indices in the given sequence,
     along with their positions (indices) in the sequence.
@@ -398,7 +406,7 @@ def print_items_at_odd_indices(sequence):
       33 is at index 5
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #          Tests have been written for you (above).
     # ------------------------------------------------------------------
 
@@ -408,6 +416,9 @@ def print_items_at_odd_indices(sequence):
 #   -- in this sample problem, the second half.
 # ----------------------------------------------------------------------
 def print_items_in_second_half(sequence):
+    for k in range(len(sequence), len(sequence) // 2, -1):
+        print(sequence[k])
+
     """
     Prints the items in the second half of the given sequence.
     For odd-length sequences, includes the middle item in the sequence.
@@ -420,7 +431,7 @@ def print_items_in_second_half(sequence):
       100
     """
     # ------------------------------------------------------------------
-    # TODO: 6. Implement and test this function.
+    # DONE: 6. Implement and test this function.
     #          Tests have been written for you (above).
     #
     # IMPORTANT: Don't get hung up on dealing with the middle item
